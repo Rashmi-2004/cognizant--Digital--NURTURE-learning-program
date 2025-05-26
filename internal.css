@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Methods</title>
+
+  <!-- Internal CSS -->
+  <style>
+    /* Body background style */
+    body {
+      background-color: #f0f0f0;
+    }
+  </style>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Inline style -->
+  <h1 style="color: red;">This heading is red using inline CSS</h1>
+
+  <h2 class="header">This heading uses external CSS</h2>
+
+</body>
+</html>
 
