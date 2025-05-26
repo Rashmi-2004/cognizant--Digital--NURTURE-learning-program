@@ -1,0 +1,15 @@
+/* Background and color */
+body {
+  background-color: #ffffff;
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Gradient heading */
+section h2 {
+  background: linear-gradient(to right, #0066cc, #33ccff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
