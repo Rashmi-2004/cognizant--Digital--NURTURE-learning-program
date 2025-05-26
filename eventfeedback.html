@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Feedback</title>
+  <script>
+    function validatePhone(input) {
+      if (!/^\d{10}$/.test(input.value)) {
+        alert("Invalid phone number!");
+      }
+    }
+
+    function updateFee(select) {
+      const fees = { "concert": "$20", "workshop": "$15", "seminar": "$10" };
+      document.getElementById("fee").value = fees[select.value] || "";
+    }
+
+    function confirmSubmit() {
+      alert("Form submitted!");
+    }
+
+    function enlargeImage(img) {
+      img.style.width = "300px";
+    }
+
+    function charCount(textarea) {
+      document.getElementById("count").innerText = textarea.value.length + " chars";
+    }
+  </script>
+</head>
+<body>
+
+  Phone: <input type="text" onblur="validatePhone(this)"><br><br>
+  Event Type:
+  <select onchange="updateFee(this)">
+    <option value="">Select</option>
+    <option value="concert">Concert</option>
+    <option value="workshop">Workshop</option>
+    <option value="seminar">Seminar</option>
+  </select><br>
+  Fee: <output id="fee"></output><br><br>
+
+  <button onclick="confirmSubmit()">Submit</button><br><br>
+
+  <img src="event.jpg" width="150" ondblclick="enlargeImage(this)" alt="Event Image"><br><br>
+
+  Feedback:<br>
+  <textarea onkeyup="charCount(this)"></textarea><br>
+  <span id="count">0 chars</span>
+
+</body>
+</html>
