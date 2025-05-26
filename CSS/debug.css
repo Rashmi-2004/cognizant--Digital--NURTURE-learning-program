@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Debug Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="task11-debug.css">
+</head>
+<body>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Events</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section class="eventCard">
+    <h2>Welcome to the Community Portal</h2>
+    <p>This is a demo page to debug and test styles using Dev Tools.</p>
+    <img src="https://via.placeholder.com/400x200" alt="Sample Image">
+    <button onclick="logDebug()">Click for Debug</button>
+  </section>
+
+  <script>
+    function logDebug() {
+      console.log("Button was clicked!");
+      let x = 10;
+      let y = 20;
+      let sum = x + y;
+      console.log("Sum:", sum); // Add a breakpoint here to inspect
+    }
+  </script>
+
+</body>
+</html>
