@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Debugging Example</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" id="debugBox"></div>
+
+  <script>
+    console.log("Script started.");
+
+    let color = "green";
+
+    document.getElementById("debugBox").onclick = function() {
+      color = (color === "green") ? "red" : "green";
+      this.style.backgroundColor = color;
+
+      console.log("Box clicked, new color:", color);
+    };
+  </script>
+</body>
+</html>
