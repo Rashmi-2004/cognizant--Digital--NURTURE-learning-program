@@ -1,0 +1,7 @@
+public class VarExample {
+    public static void main(String[] args) {
+        var name = "Java";
+        var age = 20;
+        System.out.println(name + " is " + age + " years old.");
+    }
+}
