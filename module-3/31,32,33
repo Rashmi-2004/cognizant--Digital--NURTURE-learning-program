@@ -1,0 +1,46 @@
+import java.io.*;
+import java.net.*;
+
+public class Server {
+    public static void main(String[] args) throws IOException {
+        ServerSocket ss = new ServerSocket(6666);
+        Socket s = ss.accept();
+        DataInputStream dis = new DataInputStream(s.getInputStream());
+        String str = dis.readUTF();
+        System.out.println("Message: " + str);
+        ss.close();
+    }
+}
+
+ import java.io.*;
+import java.net.*;
+
+public class HttpGetExample {
+    public static void main(String[] args) throws Exception {
+        URL url = new URL("https://api.github.com");
+        HttpURLConnection con = (HttpURLConnection) url.openConnection();
+        con.setRequestMethod("GET");
+
+        BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+        String inputLine;
+        while ((inputLine = in.readLine()) != null)
+            System.out.println(inputLine);
+        in.close();
+    }
+}
+ import java.lang.reflect.Method;
+
+class Sample {
+    public void display() {
+        System.out.println("Hello from display");
+    }
+}
+
+public class ReflectionExample {
+    public static void main(String[] args) throws Exception {
+        Class<?> cls = Class.forName("Sample");
+        Object obj = cls.getDeclaredConstructor().newInstance();
+        Method method = cls.getMethod("display");
+        method.invoke(obj);
+    }
+}
