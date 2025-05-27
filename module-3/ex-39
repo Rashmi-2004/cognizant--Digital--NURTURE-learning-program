@@ -1,0 +1,11 @@
+sealed class Shape permits Circle, Square {}
+
+final class Circle extends Shape {}
+final class Square extends Shape {}
+
+public class SealedExample {
+    public static void main(String[] args) {
+        Shape s = new Circle();
+        System.out.println("Created a shape: " + s.getClass().getSimpleName());
+    }
+}
